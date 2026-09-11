@@ -1,0 +1,1 @@
+import{o as e}from"./useStore-B9WcefOa.js";import{a as t,r as n}from"./sections-CfblHuVz.js";import{t as r}from"./ContactSection-BL5IBCu1.js";var i=e();function a(){return(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(r,{}),(0,i.jsx)(n,{}),(0,i.jsx)(t,{})]})}export{a as component};
