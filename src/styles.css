@@ -245,3 +245,15 @@
 @utility animate-marquee {
   animation: marquee-x 28s linear infinite;
 }
+
+/* Hide Netlify Drawer / HUD / Badge overlays */
+netlify-drawer,
+#netlify-hud,
+[data-netlify-hud],
+.netlify-badge,
+iframe#netlify-hud-iframe {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
