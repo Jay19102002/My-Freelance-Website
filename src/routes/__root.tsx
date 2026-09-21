@@ -100,9 +100,26 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "High-performance websites, AI agents, voice agents, chatbots, and business automation systems.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://jaydewangan.com" },
+      { property: "og:image", content: "https://jaydewangan.com/jd_logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Jay Dewangan | Web Developer & AI Automation Specialist" },
+      {
+        name: "twitter:description",
+        content:
+          "High-performance websites, AI agents, voice agents, chatbots, and business automation systems.",
+      },
+      { name: "twitter:image", content: "https://jaydewangan.com/jd_logo.png" },
+      {
+        name: "robots",
+        content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      },
     ],
     links: [
+      {
+        rel: "canonical",
+        href: "https://jaydewangan.com",
+      },
       {
         rel: "stylesheet",
         href: appCss,
@@ -114,6 +131,68 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap",
       },
       { rel: "icon", href: "/logo.jpg", type: "image/jpg" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Person",
+              "@id": "https://jaydewangan.com/#person",
+              name: "Jay Dewangan",
+              jobTitle: "Freelance Web Developer & AI Agent Automation Specialist",
+              url: "https://jaydewangan.com",
+              email: "jaydewanganbusiness@gmail.com",
+              telephone: "+917224050204",
+              image: "https://jaydewangan.com/jd_logo.png",
+              sameAs: [
+                "https://www.linkedin.com/in/jaydewangan",
+                "https://github.com/Jay19102002",
+              ],
+              knowsAbout: [
+                "Full-Stack Web Development",
+                "React",
+                "TypeScript",
+                "TanStack Start",
+                "AI Agent Development",
+                "AI Voice Agents",
+                "AI Chatbots",
+                "Business Process Automation",
+                "CRM Integration",
+                "API Integrations",
+              ],
+            },
+            {
+              "@type": "ProfessionalService",
+              "@id": "https://jaydewangan.com/#service",
+              name: "Jay Dewangan — Freelance Web Development & AI Automation",
+              url: "https://jaydewangan.com",
+              logo: "https://jaydewangan.com/jd_logo.png",
+              image: "https://jaydewangan.com/jd_logo.png",
+              email: "jaydewanganbusiness@gmail.com",
+              telephone: "+917224050204",
+              priceRange: "$$",
+              areaServed: "Worldwide",
+              founder: {
+                "@id": "https://jaydewangan.com/#person",
+              },
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://jaydewangan.com/#website",
+              url: "https://jaydewangan.com",
+              name: "Jay Dewangan Portfolio",
+              description:
+                "High-performance websites, AI agents, voice agents, chatbots, and business automation systems.",
+              publisher: {
+                "@id": "https://jaydewangan.com/#person",
+              },
+            },
+          ],
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,
