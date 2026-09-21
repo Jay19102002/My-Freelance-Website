@@ -90,38 +90,28 @@
   --sidebar-ring: oklch(0.82 0.16 183);
 
   --glass: oklch(1 0 0 / 6%);
-  --glass-strong: oklch(1 0 0 / 10%);
+  --glass-strong: oklch(1 0 0 / 30%);
   --glass-border: oklch(1 0 0 / 14%);
 
-  --gradient-hero: radial-gradient(
-      120% 90% at 15% 0%,
+  --gradient-hero: radial-gradient(120% 90% at 15% 0%,
       color-mix(in oklab, var(--primary) 26%, transparent),
-      transparent 60%
-    ),
-    radial-gradient(
-      100% 80% at 90% 10%,
+      transparent 60%),
+    radial-gradient(100% 80% at 90% 10%,
       color-mix(in oklab, var(--accent) 18%, transparent),
-      transparent 55%
-    ),
+      transparent 55%),
     radial-gradient(90% 70% at 50% 110%, oklch(0.55 0.16 285 / 0.28), transparent 60%);
-  --gradient-primary: linear-gradient(
-    135deg,
-    var(--primary),
-    color-mix(in oklab, var(--primary) 45%, oklch(0.7 0.16 265))
-  );
+  --gradient-primary: linear-gradient(135deg,
+      var(--primary),
+      color-mix(in oklab, var(--primary) 45%, oklch(0.7 0.16 265)));
   --gradient-accent: linear-gradient(135deg, var(--accent), oklch(0.78 0.17 40));
-  --gradient-text: linear-gradient(
-    100deg,
-    oklch(0.99 0.01 200),
-    var(--primary) 45%,
-    var(--accent)
-  );
-  --gradient-glass: linear-gradient(
-    145deg,
-    oklch(1 0 0 / 12%),
-    oklch(1 0 0 / 3%) 40%,
-    oklch(1 0 0 / 7%)
-  );
+  --gradient-text: linear-gradient(100deg,
+      oklch(0.99 0.01 200),
+      var(--primary) 45%,
+      var(--accent));
+  --gradient-glass: linear-gradient(145deg,
+      oklch(1 0 0 / 12%),
+      oklch(1 0 0 / 3%) 40%,
+      oklch(1 0 0 / 7%));
 
   --shadow-glass: 0 24px 60px -20px oklch(0.05 0.05 260 / 0.75),
     inset 0 1px 0 0 oklch(1 0 0 / 0.14);
@@ -174,6 +164,12 @@
   box-shadow: var(--shadow-glass);
 }
 
+@utility nav-solid {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: 0 16px 36px -12px oklch(0 0 0 / 0.5), inset 0 1px 0 0 oklch(1 0 0 / 0.08);
+}
+
 @utility text-gradient {
   background-image: var(--gradient-text);
   background-clip: text;
@@ -203,10 +199,12 @@
 }
 
 @keyframes float-slow {
+
   0%,
   100% {
     transform: translate3d(0, 0, 0) rotate(0deg);
   }
+
   50% {
     transform: translate3d(0, -18px, 0) rotate(2deg);
   }
@@ -216,9 +214,11 @@
   0% {
     box-shadow: 0 0 0 0 color-mix(in oklab, var(--primary) 55%, transparent);
   }
+
   70% {
     box-shadow: 0 0 0 10px transparent;
   }
+
   100% {
     box-shadow: 0 0 0 0 transparent;
   }
@@ -228,6 +228,7 @@
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-50%);
   }

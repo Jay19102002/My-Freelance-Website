@@ -34,9 +34,10 @@ export function CtaLink({
   size,
   className,
   children,
-}: CtaProps & { to: string }) {
+  ...props
+}: CtaProps & { to: string } & Omit<ComponentProps<typeof Link>, "to">) {
   return (
-    <Link to={to as never} className={cn(ctaVariants({ variant, size }), className)}>
+    <Link to={to as never} className={cn(ctaVariants({ variant, size }), className)} {...props}>
       {children}
     </Link>
   );
