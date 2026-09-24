@@ -21,6 +21,10 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
+      {
+        name: "google-site-verification",
+        content: "iUCYK9yJUYmTPuATMMmD2PqqCsNL4Vqpo1iLIviNwdc",
+      },
       { title: "Jay Dewangan | Web Developer & AI Agent Automation Specialist" },
       {
         name: "description",
