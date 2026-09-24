@@ -16,6 +16,35 @@ export const Route = createFileRoute("/projects/")({
         property: "og:description",
         content: "Complete AI automation and web development systems, with measurable results.",
       },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://jaydewangan.com/projects" },
+      { property: "og:image", content: "https://jaydewangan.com/jd_logo.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Projects & Case Studies | Jay Dewangan" },
+      {
+        name: "twitter:description",
+        content: "Complete AI automation and web development systems, with measurable results.",
+      },
+      { name: "twitter:image", content: "https://jaydewangan.com/jd_logo.png" },
+    ],
+    links: [
+      {
+        rel: "canonical",
+        href: "https://jaydewangan.com/projects",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Projects & Case Studies | Jay Dewangan",
+          url: "https://jaydewangan.com/projects",
+          description: "Portfolio of delivered web development and AI automation systems.",
+          publisher: { "@id": "https://jaydewangan.com/#person" },
+        }),
+      },
     ],
   }),
   component: ProjectsPage,
@@ -26,6 +55,7 @@ function ProjectsPage() {
     <>
       <Section className="pb-0 pt-14">
         <SectionHeading
+          as="h1"
           align="left"
           eyebrow="Portfolio"
           title={

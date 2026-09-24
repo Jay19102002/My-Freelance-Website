@@ -16,6 +16,22 @@ export const Route = createFileRoute("/privacy")({
         property: "og:description",
         content: "Data collection and usage practices for this portfolio website.",
       },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://jaydewangan.com/privacy" },
+      { property: "og:image", content: "https://jaydewangan.com/jd_logo.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Privacy Policy | Jay Dewangan" },
+      {
+        name: "twitter:description",
+        content: "Data collection and usage practices for this portfolio website.",
+      },
+      { name: "twitter:image", content: "https://jaydewangan.com/jd_logo.png" },
+    ],
+    links: [
+      {
+        rel: "canonical",
+        href: "https://jaydewangan.com/privacy",
+      },
     ],
   }),
   component: PrivacyPage,
@@ -47,7 +63,7 @@ const sections = [
 function PrivacyPage() {
   return (
     <Section className="pt-14">
-      <SectionHeading align="left" eyebrow="Legal" title="Privacy Policy" />
+      <SectionHeading as="h1" align="left" eyebrow="Legal" title="Privacy Policy" />
       <div className="mt-10 space-y-5">
         {sections.map((s) => (
           <GlassCard key={s.title} className="space-y-2">

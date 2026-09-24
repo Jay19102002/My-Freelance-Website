@@ -25,6 +25,33 @@ export const Route = createFileRoute("/about")({
         content:
           "A developer who understands both technology and business requirements — websites, AI agents, and automation in one system.",
       },
+      { property: "og:type", content: "profile" },
+      { property: "og:url", content: "https://jaydewangan.com/about" },
+      { property: "og:image", content: "https://jaydewangan.com/jd_logo.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "About Jay Dewangan | AI Automation & Web Developer" },
+      {
+        name: "twitter:description",
+        content:
+          "A developer who understands both technology and business requirements — websites, AI agents, and automation in one system.",
+      },
+      { name: "twitter:image", content: "https://jaydewangan.com/jd_logo.png" },
+    ],
+    links: [
+      {
+        rel: "canonical",
+        href: "https://jaydewangan.com/about",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfilePage",
+          mainEntity: { "@id": "https://jaydewangan.com/#person" },
+        }),
+      },
     ],
   }),
   component: AboutPage,
@@ -35,6 +62,7 @@ function AboutPage() {
     <>
       <Section className="pb-6 pt-14">
         <SectionHeading
+          as="h1"
           align="left"
           eyebrow="About"
           title={

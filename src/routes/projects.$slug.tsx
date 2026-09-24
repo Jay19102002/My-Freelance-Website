@@ -28,8 +28,36 @@ export const Route = createFileRoute("/projects/$slug")({
       meta: [
         { title: `${project.title} — Case Study | Jay Dewangan` },
         { name: "description", content: project.description },
-        { property: "og:title", content: `${project.title} — Case Study` },
+        { property: "og:title", content: `${project.title} — Case Study | Jay Dewangan` },
         { property: "og:description", content: project.description },
+        { property: "og:type", content: "article" },
+        { property: "og:url", content: `https://jaydewangan.com/projects/${project.slug}` },
+        { property: "og:image", content: "https://jaydewangan.com/jd_logo.png" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: `${project.title} — Case Study | Jay Dewangan` },
+        { name: "twitter:description", content: project.description },
+        { name: "twitter:image", content: "https://jaydewangan.com/jd_logo.png" },
+      ],
+      links: [
+        {
+          rel: "canonical",
+          href: `https://jaydewangan.com/projects/${project.slug}`,
+        },
+      ],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: `${project.title} — Case Study`,
+            description: project.description,
+            author: { "@id": "https://jaydewangan.com/#person" },
+            publisher: { "@id": "https://jaydewangan.com/#person" },
+            mainEntityOfPage: `https://jaydewangan.com/projects/${project.slug}`,
+            about: project.category,
+          }),
+        },
       ],
     };
   },
@@ -41,6 +69,7 @@ function ProjectNotFound() {
   return (
     <Section className="pt-20">
       <SectionHeading
+        as="h1"
         align="left"
         title="Case study not found"
         subtitle="This project may have been renamed or removed."
@@ -67,6 +96,7 @@ function CaseStudy() {
           <ArrowLeft className="h-4 w-4" /> All projects
         </Link>
         <SectionHeading
+          as="h1"
           align="left"
           eyebrow={project.category}
           title={<span className="text-gradient">{project.title}</span>}

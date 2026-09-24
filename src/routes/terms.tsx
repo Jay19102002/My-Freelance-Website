@@ -15,6 +15,22 @@ export const Route = createFileRoute("/terms")({
         property: "og:description",
         content: "Engagement terms for website, AI agent, and automation projects.",
       },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://jaydewangan.com/terms" },
+      { property: "og:image", content: "https://jaydewangan.com/jd_logo.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Terms & Conditions | Jay Dewangan" },
+      {
+        name: "twitter:description",
+        content: "Engagement terms for website, AI agent, and automation projects.",
+      },
+      { name: "twitter:image", content: "https://jaydewangan.com/jd_logo.png" },
+    ],
+    links: [
+      {
+        rel: "canonical",
+        href: "https://jaydewangan.com/terms",
+      },
     ],
   }),
   component: TermsPage,
@@ -50,7 +66,7 @@ const sections = [
 function TermsPage() {
   return (
     <Section className="pt-14">
-      <SectionHeading align="left" eyebrow="Legal" title="Terms & Conditions" />
+      <SectionHeading as="h1" align="left" eyebrow="Legal" title="Terms & Conditions" />
       <div className="mt-10 space-y-5">
         {sections.map((s) => (
           <GlassCard key={s.title} className="space-y-2">

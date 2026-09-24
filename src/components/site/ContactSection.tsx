@@ -7,12 +7,13 @@ import { CtaAnchor, CtaButton, GlassCard, Section, SectionHeading } from "./prim
 const fieldClass =
   "h-11 w-full rounded-2xl border border-glass-border bg-glass px-4 text-sm outline-none placeholder:text-muted-foreground focus:border-primary/60";
 
-export function ContactSection() {
+export function ContactSection({ headingAs = "h2" }: { headingAs?: "h1" | "h2" } = {}) {
   const [submitting, setSubmitting] = useState(false);
 
   return (
     <Section id="contact">
       <SectionHeading
+        as={headingAs}
         eyebrow="Contact"
         title={<>Have a Project in Mind?</>}
         subtitle="Tell me what you're building. I'll help you figure out the best technology, automation, and development approach."

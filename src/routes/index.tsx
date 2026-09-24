@@ -40,6 +40,23 @@ export const Route = createFileRoute("/")({
         content:
           "Websites, AI agents, voice agents, chatbots, and automation systems that help businesses work smarter.",
       },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://jaydewangan.com/" },
+      { property: "og:image", content: "https://jaydewangan.com/jd_logo.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Jay Dewangan | Web Developer & AI Agent Automation Specialist" },
+      {
+        name: "twitter:description",
+        content:
+          "Websites, AI agents, voice agents, chatbots, and automation systems that help businesses work smarter.",
+      },
+      { name: "twitter:image", content: "https://jaydewangan.com/jd_logo.png" },
+    ],
+    links: [
+      {
+        rel: "canonical",
+        href: "https://jaydewangan.com/",
+      },
     ],
   }),
   component: Index,

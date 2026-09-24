@@ -11,10 +11,26 @@ export const Route = createFileRoute("/process")({
         content:
           "Discovery, strategy, development, testing, launch, and support — the six-step process behind every website and AI automation project.",
       },
-      { property: "og:title", content: "Process | How Projects Get Built" },
+      { property: "og:title", content: "Process | How Projects Get Built — Jay Dewangan" },
       {
         property: "og:description",
         content: "A predictable path from first conversation to a live, supported system.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://jaydewangan.com/process" },
+      { property: "og:image", content: "https://jaydewangan.com/jd_logo.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Process | How Projects Get Built — Jay Dewangan" },
+      {
+        name: "twitter:description",
+        content: "A predictable path from first conversation to a live, supported system.",
+      },
+      { name: "twitter:image", content: "https://jaydewangan.com/jd_logo.png" },
+    ],
+    links: [
+      {
+        rel: "canonical",
+        href: "https://jaydewangan.com/process",
       },
     ],
   }),
@@ -26,6 +42,7 @@ function ProcessPage() {
     <>
       <Section className="pb-0 pt-14">
         <SectionHeading
+          as="h1"
           align="left"
           eyebrow="Process"
           title={

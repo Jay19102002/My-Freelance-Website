@@ -13,10 +13,26 @@ export const Route = createFileRoute("/faq")({
         content:
           "Answers on services, timelines, AI voice agents, CRM integrations, international clients, maintenance, and custom solutions.",
       },
-      { property: "og:title", content: "FAQ | Web Development & AI Automation" },
+      { property: "og:title", content: "FAQ | Web Development & AI Automation — Jay Dewangan" },
       {
         property: "og:description",
         content: "Common questions about working with Jay Dewangan on websites and AI automation.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://jaydewangan.com/faq" },
+      { property: "og:image", content: "https://jaydewangan.com/jd_logo.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "FAQ | Web Development & AI Automation — Jay Dewangan" },
+      {
+        name: "twitter:description",
+        content: "Common questions about working with Jay Dewangan on websites and AI automation.",
+      },
+      { name: "twitter:image", content: "https://jaydewangan.com/jd_logo.png" },
+    ],
+    links: [
+      {
+        rel: "canonical",
+        href: "https://jaydewangan.com/faq",
       },
     ],
     scripts: [
@@ -42,6 +58,7 @@ function FaqPage() {
     <>
       <Section className="pb-0 pt-14">
         <SectionHeading
+          as="h1"
           align="left"
           eyebrow="FAQ"
           title={

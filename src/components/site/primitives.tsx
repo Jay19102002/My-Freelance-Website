@@ -111,12 +111,14 @@ export function SectionHeading({
   title,
   subtitle,
   align = "center",
+  as: Component = "h2",
   className,
 }: {
   eyebrow?: string;
   title: ReactNode;
   subtitle?: ReactNode;
   align?: "center" | "left";
+  as?: "h1" | "h2" | "h3";
   className?: string;
 }) {
   return (
@@ -128,9 +130,9 @@ export function SectionHeading({
       )}
     >
       {eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
-      <h2 className="max-w-3xl text-balance text-3xl font-bold leading-tight md:text-5xl">
+      <Component className="max-w-3xl text-balance text-3xl font-bold leading-tight md:text-5xl">
         {title}
-      </h2>
+      </Component>
       {subtitle ? (
         <p className="max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
           {subtitle}
