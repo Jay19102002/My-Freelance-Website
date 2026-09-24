@@ -9,7 +9,7 @@ export const Route = createFileRoute("/pricing")({
       {
         name: "description",
         content:
-          "Websites from ₹15,000, business websites from ₹30,000, AI automation from ₹25,000, and AI voice agents from ₹25,000 setup.",
+          "Websites from ₹6,999, business websites from ₹19,999, AI automation from ₹14,999, and AI voice agents from ₹19,999 setup.",
       },
       { property: "og:title", content: "Pricing | Website & AI Automation Packages" },
       {

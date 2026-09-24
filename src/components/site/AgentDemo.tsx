@@ -29,7 +29,7 @@ function fallbackAnswer(input: string): string {
   if (q.includes("project") || q.includes("work") || q.includes("portfolio"))
     return "Recent builds include an AI Voice Agent Platform, a Real Estate AI Automation system, a conversion-focused business website, an AI Customer Support Agent, and a full-stack Automation Dashboard. Each has a detailed case study on the Projects page.";
   if (q.includes("cost") || q.includes("price") || q.includes("pricing") || q.includes("budget"))
-    return "Websites start from ₹25,000, business websites from ₹60,000, AI automation from ₹30,000, and AI voice agents from ₹45,000 setup plus usage. Final pricing depends on complexity, integrations, and requirements.";
+    return "Websites start from ₹6,999, business websites from ₹19,999, AI automation from ₹14,999, and AI voice agents from ₹19,999 setup plus usage. Final pricing depends on complexity, integrations, and requirements.";
   if (q.includes("contact") || q.includes("reach") || q.includes("email") || q.includes("call"))
     return `You can email ${profile.email} or message on WhatsApp. The contact form on this site sends a full project brief straight over.`;
   if (q.includes("voice"))

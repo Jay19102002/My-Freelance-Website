@@ -536,7 +536,7 @@ export const testimonials = [
 export const pricing = [
   {
     name: "Website Starter",
-    price: "Starting from ₹25,000",
+    price: "Starting from ₹6,999",
     includes: [
       "Professional website",
       "Responsive design",
@@ -549,7 +549,7 @@ export const pricing = [
   },
   {
     name: "Business Website",
-    price: "Starting from ₹60,000",
+    price: "Starting from ₹19,999",
     featured: true,
     includes: [
       "Custom website",
@@ -565,7 +565,7 @@ export const pricing = [
   },
   {
     name: "AI Automation",
-    price: "Starting from ₹30,000",
+    price: "Starting from ₹14,999",
     includes: [
       "Custom AI agent",
       "Business knowledge base",
@@ -579,7 +579,7 @@ export const pricing = [
   },
   {
     name: "AI Voice Agent",
-    price: "Starting from ₹45,000 setup",
+    price: "Starting from ₹19,999 setup",
     priceNote: "Plus applicable usage / telephony charges.",
     includes: [
       "Custom AI voice agent",
@@ -655,11 +655,11 @@ export const projectTypes = [
 ];
 
 export const budgets = [
-  "Under ₹15,000",
-  "₹15,000 – ₹30,000",
-  "₹30,000 – ₹75,000",
-  "₹75,000 – ₹2,00,000",
-  "₹2,00,000+",
+  "Under ₹10,000",
+  "₹10,000 – ₹20,000",
+  "₹20,000 – ₹50,000",
+  "₹50,000 – ₹1,00,000",
+  "₹1,00,000+",
   "Not sure yet",
 ];
 
